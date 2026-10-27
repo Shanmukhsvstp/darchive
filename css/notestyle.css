@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url('Images/form_bg.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    line-height: 1.5rem;
+}
+
+header{
+    margin: 2rem;
+    border: 0.5rem solid goldenrod;
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: antiquewhite;
+    text-align: center;
+    font-size: 2rem;
+}
+
+hr{
+    height: 0.1rem;
+    color: rgb(143, 105, 56);
+    background-color: rgb(143, 105, 56);
+    border: none;
+}
+
+.flex-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+main{
+    margin: 2rem;
+    border: 0.5rem solid goldenrod;
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: antiquewhite;
+    width: 80%;
+}
+
+.subs{
+    margin: 1rem;
+    border: 2px dotted goldenrod;
+    padding: 1rem;
+    flex-wrap: wrap;
+}
+
+.RCard{
+    margin: 0.5rem;
+    border: 0.2rem double goldenrod;
+    padding: 1rem;
+    background-color: rgb(71, 53, 34);
+    corner-shape: scoop;
+    border-radius: 10px;
+    position: relative;
+    min-width: none;
+}
+
+aside{
+    margin: 2rem;
+    border: 0.5rem solid goldenrod;
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: antiquewhite;
+    width: 20%;
+    font-size: 2rem;
+    height: 50vh;
+    position: sticky;
+    top: 1rem;
+}
+
+aside ul{
+    list-style: none;
+    
+}
+aside ul li{
+    margin: 1rem;
+}
+
+aside a{
+    color: hsl(34, 78%, 91%);
+}
+
+aside a:hover{
+    color: hsla(33, 78%, 91%, 0.736);
+}

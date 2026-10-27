@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    /*background-color: black;*/
+    color: antiquewhite;
+    background-image: url('Images/form_bg.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    line-height: 1.5rem;
+    font-size: 1.2rem;
+}
+
+header{
+    background-color: rgba(0, 0, 0, 0.8);
+    margin: 4rem;
+    padding: 2rem;
+    text-align: center;
+    border: 0.2rem solid goldenrod;
+    corner-shape: scoop;
+    border-radius: 20px;
+}
+
+.flex-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+}
+
+aside{
+    background-color: rgba(0, 0, 0, 0.8);
+    margin: 4rem;
+    padding: 2rem;
+    text-align: left;
+    border: 0.2rem solid goldenrod;
+    corner-shape: scoop;
+    border-radius: 20px;
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    gap: 2;
+    position: sticky;
+}
+
+aside ul{
+    list-style: none;
+}
+
+aside article{
+    margin: 2rem;
+    border: 0.5rem double goldenrod;
+    background-color: rgb(71, 53, 34);
+    padding: 1rem;
+    min-height: min-content;
+
+}
+
+aside a{
+    color: hsl(34, 78%, 91%);
+}
+
+aside a:hover{
+    color: hsla(33, 78%, 91%, 0.736);
+}
+
+main{
+    background-color: rgba(0, 0, 0, 0.8);
+    margin: 4rem;
+    padding: 2rem;
+    border: 0.2rem solid goldenrod;
+    corner-shape: scoop;
+    border-radius: 20px;
+    width: 60%;
+}
+
+label{
+    font-size: 1rem;
+}
+
+p{
+    margin: 1.5rem;
+    padding: 1rem;
+    border: 0.1rem solid goldenrod;
+}
+
+main article{
+    margin: 1.5em;
+    border: 0.1em solid goldenrod;
+    padding: 1rem;
+    background-color: rgb(71, 53, 34);
+    
+}
+
+main article p{
+    border: 0.5rem double goldenrod;
+    border-radius: 20px;
+    corner-shape: scoop;
+}
+
+.p_b{
+    background-color: hsl(34, 78%, 91%);
+    width: 5rem;
+    height: 2rem;
+    border-style: solid;
+    border-radius: 2rem;
+}
+
+.p_b:hover{
+    background-color: hsl(33, 30%, 59%);
+    border-color: hsl(49, 78%, 91%);
+    transition: 0.3s;
+}
+
+.p_b:active{
+    background-color: hsl(34, 42%, 34%);
+}
+
+footer{
+    background-color: rgba(0, 0, 0, 0.8);
+    margin: 4rem;
+    padding: 2rem;
+    border: 0.2rem solid goldenrod;
+    corner-shape: scoop;
+    border-radius: 20px;
+}

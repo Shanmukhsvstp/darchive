@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    width: 100vw;
+    height: 100vw;
+    height: 100dvh;
+    overflow: hidden;
+}
+
+body{
+    background-color: rgba(6, 1, 1, .8);
+    color: antiquewhite;
+    font-size: 2rem;
+    border: double antiquewhite;
+    margin: 10%;
+    /*outline-offset: 50px;*/
+    background-image: url('Images/form_bg.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: Imperial;
+    border: 2px, white;
+    corner-shape: scoop;
+    border-radius: 20px;
+    /*width: 100vw;
+    height: 100vw;
+    height: 100dvh;*/
+    overflow: hidden;
+
+    width: 80vw;              
+    height: 80dvh; 
+    margin: 10dvh auto; 
+}
+
+h1{
+    box-sizing: border-box;
+    text-align: center;
+}
+header{
+    /*margin-top: 1.5rem;
+    margin-right: 1.5rem;
+    margin-left: 1.5rem;*/
+    color: antiquewhite;
+    padding: 1.5rem;
+    background-color: rgba(6, 1, 1, .8);
+    border: black;
+    corner-shape: scoop;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+main{
+    padding: 5rem;
+    background-color: rgba(6, 1, 1, .8);
+    border-color: black;
+    corner-shape: scoop;
+    border-radius: 20px;
+    overflow: hidden;
+    
+}
+
+input, button{
+    font: inherit;
+}
+
+main article{
+    margin: 2em;
+}
+
+.subm{
+    background-color: antiquewhite;
+    border-style: hidden;
+    width: 10rem;
+    height: 3rem;
+    border-radius: 5rem;
+}
+
+.subm:hover{
+    background-color: rgb(218, 172, 111);
+    transition: 0.5s;
+    border-color: black;
+}
+
+.subm:active{
+    background-color: rgb(150, 125, 92);
+}
+
+.imperial-script-regular {
+  font-family: "Imperial Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
