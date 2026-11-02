@@ -5,89 +5,68 @@
 }
 
 body{
+    background-color: rgba(6, 1, 1, .8);
+    color: antiquewhite;
+    font-size: 2rem;
+    border: double antiquewhite;
+    margin: 10%;
+    /*outline-offset: 50px;*/
     background-image: url('./../Images/form_bg.jpg');
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    line-height: 1.5rem;
+    font-family: Imperial;
+    border: 2px, white;
+    corner-shape: scoop;
+    border-radius: 20px;
+    /*width: 100vw;
+    height: 100vw;
+    height: 100dvh;*/
+    overflow: hidden;
+
+    width: 80vw;              
+    height: 80dvh; 
+    margin: 10dvh auto; 
 }
 
-header{
-    margin: 2rem;
-    border: 0.5rem solid goldenrod;
-    padding: 2rem;
-    background-color: rgba(0, 0, 0, 0.8);
-    color: antiquewhite;
-    text-align: center;
-    font-size: 2rem;
-}
-
-hr{
-    height: 0.1rem;
-    color: rgb(143, 105, 56);
-    background-color: rgb(143, 105, 56);
-    border: none;
-}
-
-.flex-container{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-}
 
 main{
-    margin: 2rem;
-    border: 0.5rem solid goldenrod;
     padding: 2rem;
-    background-color: rgba(0, 0, 0, 0.8);
-    color: antiquewhite;
-    width: 80%;
-}
-
-.subs{
-    margin: 1rem;
-    border: 2px dotted goldenrod;
-    padding: 1rem;
-    flex-wrap: wrap;
-}
-
-.RCard{
-    margin: 0.5rem;
-    border: 0.2rem double goldenrod;
-    padding: 1rem;
-    background-color: rgb(71, 53, 34);
+    background-color: rgba(6, 1, 1, .8);
+    border-color: black;
     corner-shape: scoop;
-    border-radius: 10px;
-    position: relative;
-    min-width: none;
+    border-radius: 20px;
+    overflow: hidden;
 }
 
-aside{
-    margin: 2rem;
-    border: 0.5rem solid goldenrod;
-    padding: 2rem;
-    background-color: rgba(0, 0, 0, 0.8);
-    color: antiquewhite;
-    width: 20%;
-    font-size: 2rem;
-    height: 50vh;
-    position: sticky;
-    top: 1rem;
+input, button{
+    font: inherit;
 }
 
-aside ul{
-    list-style: none;
-    
-}
-aside ul li{
-    margin: 1rem;
+main article{
+    margin: 2em;
 }
 
-aside a{
-    color: hsl(34, 78%, 91%);
+.subm{
+    background-color: antiquewhite;
+    border-style: hidden;
+    width: 10rem;
+    height: 3rem;
+    border-radius: 5rem;
 }
 
-aside a:hover{
-    color: hsla(33, 78%, 91%, 0.736);
+.subm:hover{
+    background-color: rgb(218, 172, 111);
+    transition: 0.5s;
+    border-color: black;
+}
+
+.subm:active{
+    background-color: rgb(150, 125, 92);
+}
+
+.imperial-script-regular {
+  font-family: "Imperial Script", cursive;
+  font-weight: 400;
+  font-style: normal;
 }

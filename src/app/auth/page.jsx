@@ -1,6 +1,6 @@
-import './NavBar.css';
+import './page.css';
 
-export default function NavBar() {
+export default function page() {
   return (
     <div>
     <header>
