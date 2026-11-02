@@ -1,0 +1,182 @@
+
+.notes-root {
+  color: antiquewhite;
+  background-image: url('./../Images/form_bg.jpg');
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  line-height: 1.5rem;
+  font-size: 1.2rem;
+  min-height: 100vh;
+  padding-bottom: 2rem;
+}
+
+.notes-root *,
+.notes-root *::before,
+.notes-root *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.notes-root header {
+  background-color: rgba(0, 0, 0, 0.8);
+  margin: 1rem;
+  padding: 1.5rem;
+  text-align: center;
+  border: 0.2rem solid goldenrod;
+  border-radius: 20px;
+}
+
+.notes-root .flex-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  gap: 2rem;
+  padding: 0 2rem;
+}
+
+/* ---------- Main (wider) ---------- */
+.notes-root main {
+  background-color: rgba(0, 0, 0, 0.8);
+  margin: 0;
+  padding: 2rem;
+  border: 0.2rem solid goldenrod;
+  border-radius: 20px;
+  flex: 1 1 auto;
+  width: auto;
+  min-width: 0; /* lets flex shrink children properly */
+}
+
+/* ---------- Aside (fixed, neat width) ---------- */
+.notes-root aside {
+  background-color: rgba(0, 0, 0, 0.8);
+  margin: 0;
+  padding: 1.5rem 1.5rem 1.5rem 1rem;
+  text-align: left;
+  border: 0.2rem solid goldenrod;
+  border-radius: 20px;
+  flex: 0 0 240px;
+  width: 240px;
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 1rem;
+  max-height: calc(100vh - 2rem);
+  overflow-y: auto;
+}
+
+.notes-root aside ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.notes-root aside ul li {
+  margin: 0;
+}
+
+.notes-root aside a {
+  display: block;
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  color: hsl(34, 78%, 91%);
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.notes-root aside a:hover {
+  background-color: rgba(218, 165, 32, 0.15);
+  color: hsla(33, 78%, 91%, 1);
+}
+
+/* ---------- Subject sections ---------- */
+.notes-root .subs {
+  margin: 1rem 0;
+  border: 2px dotted goldenrod;
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.notes-root .subs h2 {
+  margin: 0 0 0.75rem 0.25rem;
+  font-size: 1.6rem;
+}
+
+/* ---------- Cards ---------- */
+.notes-root #Notesere {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.notes-root .RCard {
+  margin: 0;
+  border: 0.2rem double goldenrod;
+  padding: 1rem;
+  background-color: rgb(71, 53, 34);
+  border-radius: 10px;
+  position: relative;
+  flex: 1 1 220px;
+  max-width: 320px;
+}
+
+.notes-root .RCard h3 {
+  margin-bottom: 0.5rem;
+}
+
+.notes-root .RCard section {
+  margin: 0;
+}
+
+.notes-root .RCard img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+.notes-root .RCard p {
+  margin: 0.5rem 0 0;
+  border: none;
+  padding: 0;
+  font-size: 0.95rem;
+}
+
+/* ---------- Misc ---------- */
+.notes-root hr {
+  height: 0.1rem;
+  background-color: rgb(143, 105, 56);
+  border: none;
+}
+
+.notes-root footer {
+  background-color: rgba(0, 0, 0, 0.8);
+  margin: 2rem 1rem 1rem;
+  padding: 2rem;
+  border: 0.2rem solid goldenrod;
+  border-radius: 20px;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .notes-root .flex-container {
+    flex-direction: column;
+    padding: 0 1rem;
+  }
+  .notes-root aside {
+    position: static;
+    width: 100%;
+    flex: 1 1 auto;
+    max-height: none;
+  }
+  .notes-root main {
+    width: 100%;
+  }
+}

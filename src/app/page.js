@@ -1,7 +1,34 @@
-import Image from "next/image";
+"use client";
+
 import "./home.css";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
+
+  const router = useRouter();
+
+  async function handleLogout() {
+    try {
+      const response = await fetch(
+        "http://localhost:2026/api/auth/logout",
+        {
+          method: "POST",
+          credentials: "include",
+        }
+      );
+
+      if (response.ok) {
+        router.replace("/auth");
+        router.refresh();
+      } else {
+        console.error("Logout failed");
+      }
+    } catch (error) {
+      console.error("Error logging out:", error);
+    }
+  }
+
   return (
     <div>
       <div className="flex-container">
@@ -45,7 +72,7 @@ export default function Home() {
                     
                   </section>
                   <section>
-                    <a href="notes.html">PDFs and Notes</a>
+                    <Link href="/notes">PDFs and Notes</Link>
                   </section>
                 </article>
               </li>
@@ -66,6 +93,16 @@ export default function Home() {
                   </section>
                   <section>
                     <a href="">Lab Work</a>
+                  </section>
+                </article>
+              </li>
+              <li>
+                <article>
+                  <section>
+                    
+                  </section>
+                  <section>
+                    <button onClick={handleLogout}>Logout</button>
                   </section>
                 </article>
               </li>
