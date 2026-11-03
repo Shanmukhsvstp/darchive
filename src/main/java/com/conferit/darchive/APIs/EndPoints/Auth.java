@@ -23,7 +23,9 @@ public class Auth {
                 "email", user.getEmail() != null
                         ? user.getEmail() : "",
                 "picture", user.getPicture() != null
-                        ? user.getPicture() : ""
+                        ? user.getPicture() : "",
+                "actual_data", user.toString()
         );
     }
+
 }

@@ -1,8 +1,10 @@
+
 package com.conferit.darchive.Configs;
 
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.web.SecurityFilterChain;
@@ -21,16 +23,16 @@ public class SecurityConfig {
             throws Exception {
 
         http
+                .cors(Customizer.withDefaults())
+
                 .authorizeHttpRequests(auth -> auth
-                        // Public endpoints
                         .requestMatchers(
                                 "/api/",
                                 "/api",
+                                "/api/auth/csrf",
                                 "/oauth2/**",
                                 "/login/**"
                         ).permitAll()
-
-                        // Everything else requires authentication
                         .anyRequest().authenticated()
                 )
 
@@ -38,15 +40,15 @@ public class SecurityConfig {
                         .redirectionEndpoint(redirection -> redirection
                                 .baseUri("/api/auth/google/callback/*")
                         )
-
-                        // Redirect the browser to your frontend after login
-                        .defaultSuccessUrl("http://localhost:3000/", true)
+                        .defaultSuccessUrl(
+                                "http://localhost:3000/", true
+                        )
                 )
 
                 .logout(logout -> logout
                         .logoutUrl("/api/auth/logout")
                         .logoutSuccessHandler((request, response, authentication) -> {
-                            response.setStatus(HttpServletResponse.SC_OK);
+                            response.setStatus(HttpServletResponse.SC_NO_CONTENT);
                         })
                         .invalidateHttpSession(true)
                         .clearAuthentication(true)
