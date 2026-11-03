@@ -46,7 +46,7 @@ aside{
     flex-direction: column;
     gap: 2;
     position: sticky;
-    max-height: 55vh;
+    height: 80vh;
 }
 
 aside ul{

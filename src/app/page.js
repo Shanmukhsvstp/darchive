@@ -8,26 +8,37 @@ export default function Home() {
 
   const router = useRouter();
 
-  async function handleLogout() {
-    try {
-      const response = await fetch(
-        "http://localhost:2026/api/auth/logout",
-        {
-          method: "POST",
-          credentials: "include",
-        }
-      );
 
-      if (response.ok) {
-        router.replace("/auth");
-        router.refresh();
-      } else {
-        console.error("Logout failed");
-      }
-    } catch (error) {
-      console.error("Error logging out:", error);
+async function handleLogout() {
+    const API = "http://localhost:8080";
+
+    // Fetch CSRF token
+    const csrfResponse = await fetch(`${API}/api/auth/csrf`, {
+        credentials: "include"
+    });
+
+    if (!csrfResponse.ok) {
+        throw new Error("Failed to obtain CSRF token");
     }
-  }
+
+    const csrf = await csrfResponse.json();
+
+    // Logout using the same session
+    const response = await fetch(`${API}/api/auth/logout`, {
+        method: "POST",
+        credentials: "include",
+        headers: {
+            [csrf.headerName]: csrf.token
+        }
+    });
+
+    if (!response.ok) {
+        throw new Error(`Logout failed: ${response.status}`);
+    }
+
+    window.location.href = "/login";
+}
+
 
   return (
     <div>
