@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url('./../../app/Images/form_bg.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    line-height: 1.5rem;
+}
+
+.header{
+    margin: 2rem;
+    border: 0.5rem solid goldenrod;
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: antiquewhite;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.header div:hover {
+    color: goldenrod;
+    transition: 0.4s;
+}

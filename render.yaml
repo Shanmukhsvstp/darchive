@@ -1,0 +1,30 @@
+# Render Blueprint: creates the backend web service. (The frontend goes on Vercel - see DEPLOY.md.)
+services:
+  - type: web
+    name: darchive-backend
+    runtime: docker
+    rootDir: backend
+    dockerfilePath: ./Dockerfile
+    plan: free
+    healthCheckPath: /api/auth/csrf
+    envVars:
+      - key: NEON_JDBC_URL        # jdbc:postgresql://<pooler-host>/<db>?sslmode=require
+        sync: false
+      - key: NEON_DB_USER
+        sync: false
+      - key: NEON_DB_PASSWORD
+        sync: false
+      - key: GOOGLE_CLIENT_ID
+        sync: false
+      - key: GOOGLE_CLIENT_SECRET
+        sync: false
+      - key: ANTHROPIC_API_KEY
+        sync: false
+      - key: ADMIN_EMAILS
+        sync: false
+      - key: FRONTEND_URL         # your Vercel URL, e.g. https://darchive.vercel.app
+        sync: false
+      - key: COOKIE_SECURE
+        value: "true"
+      - key: ALLOWED_EMAIL_DOMAIN
+        value: bmsce.ac.in

@@ -1,0 +1,194 @@
+.login-page {
+    min-height: calc(100vh - 80px);
+    padding: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    color: antiquewhite;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular',
+        'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.login-page header {
+    background-color: rgba(0, 0, 0, 0.8);
+    margin: 1rem;
+    padding: 1.5rem;
+    text-align: center;
+    border: 0.2rem solid goldenrod;
+    border-radius: 20px;
+    width: min(100%, 430px);
+}
+
+.login-page #Login_h {
+    font-family: 'Imperial Script', cursive;
+    font-size: 4rem;
+    font-weight: 400;
+    line-height: 1.3;
+}
+
+.login-page .subtitle {
+    color: hsl(34, 78%, 80%);
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    margin-top: 0.5rem;
+}
+
+.login-page .login-card {
+    background-color: rgba(0, 0, 0, 0.85);
+    margin: 1rem;
+    padding: 2.5rem 2rem;
+    text-align: center;
+
+    border: 0.2rem solid goldenrod;
+    border-radius: 20px;
+
+    width: min(100%, 430px);
+}
+
+.login-page .login-icon {
+    width: 65px;
+    height: 65px;
+    margin: 0 auto 1.5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: goldenrod;
+    background-color: rgb(71, 53, 34);
+    border: 1px solid goldenrod;
+    border-radius: 50%;
+    font-size: 2rem;
+}
+
+.login-page .login-card h2 {
+    font-size: 1.35rem;
+    margin-bottom: 1rem;
+}
+
+.login-page .description {
+    color: hsl(34, 30%, 75%);
+    font-size: 0.9rem;
+    line-height: 1.8;
+    margin: 0 0 2rem;
+    padding: 0;
+    border: none;
+}
+
+.login-page .google-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+
+    width: 100%;
+    min-height: 55px;
+    padding: 0.8rem 1rem;
+
+    background-color: antiquewhite;
+    color: #17110b;
+
+    border: 2px solid goldenrod;
+    border-radius: 2rem;
+
+    font-family: inherit;
+    font-size: 0.95rem;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.login-page .google-logo {
+    width: 23px;
+    height: 23px;
+    flex-shrink: 0;
+}
+
+.login-page .google-btn:hover {
+    background-color: hsl(33, 30%, 75%);
+    border-color: antiquewhite;
+    transform: translateY(-2px);
+}
+
+.login-page .google-btn:active {
+    background-color: hsl(34, 42%, 55%);
+    transform: scale(0.98);
+}
+
+.login-page .divider {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+
+    margin: 2rem 0 1.5rem;
+
+    color: goldenrod;
+    font-size: 0.65rem;
+    letter-spacing: 1.5px;
+}
+
+.login-page .divider::before,
+.login-page .divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background-color: rgba(218, 165, 32, 0.4);
+}
+
+.login-page .college-note {
+    margin: 0;
+    padding: 0;
+    border: none;
+
+    color: hsl(34, 30%, 75%);
+    font-size: 0.8rem;
+}
+
+.login-page .college-note strong {
+    color: antiquewhite;
+}
+
+.login-page .login-footer {
+    background: none;
+    border: none;
+    margin: 1rem 0 0;
+    padding: 1rem;
+
+    color: antiquewhite;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.login-page .login-footer span {
+    color: goldenrod;
+    padding: 0 0.5rem;
+}
+
+@media (max-width: 480px) {
+    .login-page {
+        padding: 1rem;
+    }
+
+    .login-page header {
+        margin: 0.5rem;
+        padding: 1rem;
+    }
+
+    .login-page #Login_h {
+        font-size: 3.5rem;
+    }
+
+    .login-page .login-card {
+        margin: 0.5rem;
+        padding: 2rem 1.25rem;
+    }
+}

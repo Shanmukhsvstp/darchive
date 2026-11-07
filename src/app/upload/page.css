@@ -1,0 +1,65 @@
+.upload-root {
+  color: antiquewhite;
+  background-image: url('./../Images/form_bg.jpg');
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.upload-card {
+  width: 100%;
+  max-width: 34rem;
+  background: rgba(0, 0, 0, 0.8);
+  border: 0.2rem solid goldenrod;
+  border-radius: 20px;
+  padding: 1.5rem;
+}
+
+.upload-card h2 { margin-bottom: 1rem; }
+
+.upload-card label {
+  display: block;
+  margin: 0.8rem 0 0.25rem;
+}
+
+.upload-card input[type="text"],
+.upload-card input[type="url"],
+.upload-card input[type="number"],
+.upload-card select,
+.upload-card textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 8px;
+  border: 1px solid goldenrod;
+  background: rgba(255, 255, 255, 0.08);
+  color: antiquewhite;
+  font: inherit;
+}
+
+.upload-card select option { color: black; }
+
+.upload-card .row { display: flex; gap: 1rem; align-items: center; margin-top: 0.8rem; }
+.upload-card .row label { display: inline; margin: 0; }
+
+.upload-card button[type="submit"] {
+  margin-top: 1.2rem;
+  padding: 0.6rem 1.4rem;
+  border-radius: 10px;
+  border: 2px solid goldenrod;
+  background: transparent;
+  color: goldenrod;
+  font: inherit;
+  cursor: pointer;
+}
+
+.upload-card button[type="submit"]:hover:not(:disabled) { background: goldenrod; color: black; }
+.upload-card button[disabled] { opacity: 0.6; cursor: wait; }
+.upload-msg-error { color: #ff8a80; margin-top: 0.8rem; }
+.upload-msg-ok { color: #a5d6a7; margin-top: 0.8rem; }

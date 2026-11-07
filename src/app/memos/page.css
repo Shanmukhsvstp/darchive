@@ -1,0 +1,26 @@
+.memos-root {
+  color: antiquewhite;
+  background-image: url('./../Images/form_bg.jpg');
+  background-position: center; background-size: cover; background-attachment: fixed;
+  font-family: 'Lucida Sans', Geneva, Verdana, sans-serif;
+  min-height: 100vh; padding: 1.5rem 1rem;
+}
+.memos-wrap { max-width: 60rem; margin: 0 auto; display: flex; flex-direction: column; gap: 1rem; }
+.memo-box {
+  background: rgba(0,0,0,0.8); border: 0.2rem solid goldenrod; border-radius: 20px; padding: 1rem 1.25rem;
+}
+.memo-box input[type="text"], .memo-box textarea {
+  width: 100%; margin-top: 0.5rem; padding: 0.5rem; border-radius: 8px; border: 1px solid goldenrod;
+  background: rgba(255,255,255,0.08); color: antiquewhite; font: inherit;
+}
+.memo-box button, .memo-box a.btn {
+  background: transparent; color: goldenrod; border: 1px solid goldenrod; border-radius: 8px;
+  padding: 0.3rem 0.9rem; cursor: pointer; font: inherit; margin: 0.6rem 0.5rem 0 0;
+}
+.memo-box button:hover:not(:disabled) { background: goldenrod; color: #000; }
+.memo-box button:disabled { opacity: 0.5; cursor: wait; }
+.memo-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr)); gap: 1rem; }
+.memo-body { white-space: pre-wrap; margin-top: 0.5rem; }
+.memo-summary { margin-top: 0.75rem; padding: 0.6rem; border-left: 4px solid goldenrod; background: rgba(255,215,0,0.07); white-space: pre-wrap; }
+.memo-meta { opacity: 0.7; font-size: 0.85rem; }
+.memo-err { color: #ff8a80; }
