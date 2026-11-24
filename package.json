@@ -8,6 +8,7 @@
     "start": "next start -p 20260"
   },
   "dependencies": {
+    "eslint-config-next": "^16.4.6",
     "next": "^16.4.6",
     "react": "19.3.0",
     "react-dom": "19.3.0"
